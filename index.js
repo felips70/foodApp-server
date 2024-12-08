@@ -26,9 +26,7 @@ const options = {
 const swaggerSpec = swaggerJsdoc(options);
 app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerSpec));
 
-app.use(cors({
-  origin: "http://localhost:5173"
-}))
+app.use(cors())
 
 app.use(express.json());
 
